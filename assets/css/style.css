@@ -1,19 +1,21 @@
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
+  color: rgb(0, 0, 0);
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
   position: relative;
-  opacity: 0.65;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 .bgimg-1 {
   background-image: url("/assets/images/morse-code1.jpg");
@@ -22,7 +24,8 @@ body, html {
 
 .bgimg-2 {
   background-image: url("/assets/images/morse-code2.jpg");
-  min-height: 400px;
+  min-height: 500px;
+  text-align: right;
 }
 
 .bgimg-3 {
@@ -33,7 +36,7 @@ body, html {
 .caption {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 20%;
   width: 100%;
   text-align: center;
   color: #000;
@@ -42,9 +45,32 @@ body, html {
 .caption span.border {
   background-color: #111;
   color: #fff;
-  padding: 18px;
   font-size: 25px;
-  letter-spacing: 10px;
+}
+
+.whatis {
+  color: #777;
+  background-color: white;
+  text-align: center;
+  padding: 25px 40px;
+  text-align: justify;
+}
+
+.rules {
+  position: relative;
+  color: #ddd;
+  background-color: #282e34;
+  text-align: center;
+  padding: 25px 40px;
+  text-align: justify;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  color: #fff;
 }
 
 h3 {
@@ -54,17 +80,85 @@ h3 {
   color: #111;
 }
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-  }
+.img-morse-code {
+  height: 450px;
+  width: 320px;
 }
 
 /* navbar align items in the center*/
 
 .navbar-nav {
-    float:none;
-    margin:0 auto;
-    text-align: center;
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* game style*/
+
+.game-numbers {
+  margin: auto;
+  width: 90vw;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.game-numbers button {
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 2rem;
+  border: solid black 1px;
+}
+
+.game-numbers img {
+  width: 12.5vh;
+  pointer-events: none;
+}
+
+.win-container {
+  grid-column: 2/4;
+  grid-row: 2/4;
+
+  background-color: green;
+  display: none;
+  border: black solid 1px;
+  flex-direction: column;
+
+  text-transform: uppercase;
+  font-family: roboto;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vmin;
+}
+
+.play-again {
+  background: #a00;
+  color: white;
+  padding: 0.5rem;
+  font-family: roboto;
+  text-transform: uppercase;
+  border: 1px black solid;
+}
+
+/* hide text from navbar on small screens, hide full screen and sound as its easy to control on mobile deivice */
+@media only screen and (max-width: 767px) {
+  .hidde-on-small-screen {
+    display: none !important;
+  }
+
+  /* resize images from buttons to fit on a small screen */
+
+  .game-numbers img {
+    width: 10vh;
+    pointer-events: none;
+  }
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+  }
 }

@@ -1,220 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <script src="https://use.fontawesome.com/12932c28d2.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <title>Morse code Learning Game</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous" />
-	<script src="https://use.fontawesome.com/12932c28d2.js"></script>
-	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-	<title>Morse code Learning Game</title>
-</head>
-
-<body>
-	<nav class="navbar fixed-bottom navbar-expand-lg navbar-light navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Navbar</a>
-		<button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			<div class="navbar-nav">
-				<a class="nav-item nav-link" href="#"><i class="fas fa-home"></i> Home</a>
-				<a class="nav-item nav-link" href="#play"><i class="fas fa-play"></i> Play</a>
-				<a class="nav-item nav-link" href="#rules"><i class="far fa-address-card"></i> Rules</a>
-				<a class="nav-item nav-link" href="#" onclick="enableMute()"><i class="fas fa-volume-up"></i> ON</a>
-				<a class="nav-item nav-link" href="#" onclick="disableMute()"><i class="fas fa-volume-mute"></i> OFF</a>
-				<a class="nav-item nav-link" href="#" onclick="openFullscreen()"><i class="fas fa-expand"></i> Full
-					Screen</a>
-				<a class="nav-item nav-link" href="#" onclick="closeFullscreen()"><i class="fas fa-compress"></i> Full
-					Screen</a>
-			</div>
-		</div>
-	</nav>
-
-	<div class="container caption">
-        <div class="row">
-          <div class="col-md-6">Be apocalipse ready, lear an usefull skill!</div>
-          <div class="col-md-6">
-            <p>
-              <a href="#whatis"
-                ><button type="button" class="btn btn-danger">
-                  what's Morse code?
-                </button></a
-              >
-            </p>
-            <p>
-              <a href="#rules"
-                ><button type="button" class="btn btn-warning">
-                  Game Rules..
-                </button></a
-              >
-            </p>
-            <p>
-              <a href="#play"
-                ><button type="button" class="btn btn-success">
-                  Let me play!
-                </button></a
-              >
-            </p>
-          </div>
+  <body>
+    <nav class="navbar fixed-bottom navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"></a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#"
+            ><i class="fas fa-home"></i>
+            <span class="hidde-on-small-screen">Home</span>
+          </a>
+          <a class="nav-item nav-link" href="#play"
+            ><i class="fas fa-play"></i
+            ><span class="hidde-on-small-screen"> Play</span></a
+          >
+          <a class="nav-item nav-link" href="#rules"
+            ><i class="far fa-address-card"></i
+            ><span class="hidde-on-small-screen"> Rules</span></a
+          >
+          <a class="nav-item nav-link" href="#" onclick="enableMute()"
+            ><span class="hidde-on-small-screen"
+              ><i class="fas fa-volume-up"></i> ON</span
+            ></a
+          >
+          <a class="nav-item nav-link" href="#" onclick="disableMute()"
+            ><span class="hidde-on-small-screen"
+              ><i class="fas fa-volume-mute"></i> OFF</span
+            ></a
+          >
+          <a class="nav-item nav-link" href="#" onclick="openFullscreen()"
+            ><span class="hidde-on-small-screen"
+              ><i class="fas fa-expand"></i> Full Screen</span
+            ></a
+          >
+          <a class="nav-item nav-link" href="#" onclick="closeFullscreen()"
+            ><span class="hidde-on-small-screen"
+              ><i class="fas fa-compress"></i> Exit Full Screen</span
+            ></a
+          >
         </div>
       </div>
-	<div class="bgimg-1">
-	</div>
+    </nav>
 
-	<div id="whatis" class="whatis">
-		<h3 style="text-align: center;">What's Morse Code?</h3>
-		<ul>
-			<li>
-				Morse code is a method used in telecommunication to encode text
-				characters as standardized sequences of two different signal
-				durations, called dots and dashes or dits and dahs. Morse code is
-				named after Samuel Morse, an inventor of the telegraph.
-			</li>
-			<li>
-				The International Morse Code encodes the 26 English letters A through
-				Z, some non-English letters, the Arabic numerals and a small set of
-				punctuation and procedural signals (prosigns). There is no distinction
-				between upper and lower case letters. Each Morse code symbol is formed
-				by a sequence of dots and dashes.
-			</li>
-			<li>
-				Morse code can be memorized, and Morse code signalling in a form
-				perceptible to the human senses, such as sound waves or visible light,
-				can be directly interpreted by persons trained in the skill.
-			</li>
-			<li>
-				<a href="https://en.wikipedia.org/wiki/Morse_code" target="_blank">Learn More...</a>
-			</li>
-		</ul>
-	</div>
+    <div class="bgimg-1"></div>
+    <div class="container caption">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Be apocalipse ready, learn a usefull skill!</h1>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <a href="#whatis">What's Morse code?</a>
+          </p>
+          <p>
+            <a href="#rules">Game Rules.. </a>
+          </p>
+          <p>
+            <a href="#play"> Let me play! </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="whatis" class="whatis">
+      <h3 style="text-align: center;">What's Morse Code?</h3>
+      <ul>
+        <li>
+          Morse code is a method used in telecommunication to encode text
+          characters as standardized sequences of two different signal
+          durations, called dots and dashes or dits and dahs. Morse code is
+          named after Samuel Morse, an inventor of the telegraph.
+        </li>
+        <li>
+          The International Morse Code encodes the 26 English letters A through
+          Z, some non-English letters, the Arabic numerals and a small set of
+          punctuation and procedural signals (prosigns). There is no distinction
+          between upper and lower case letters. Each Morse code symbol is formed
+          by a sequence of dots and dashes.
+        </li>
+        <li>
+          Morse code can be memorized, and Morse code signalling in a form
+          perceptible to the human senses, such as sound waves or visible light,
+          can be directly interpreted by persons trained in the skill.
+        </li>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Morse_code" target="_blank"
+            >Learn More...</a
+          >
+        </li>
+      </ul>
+    </div>
 
-	<div class="bgimg-2">
-		<div>
-			<span
+    <div class="bgimg-2">
+      <div>
+        <span
           ><img
             src="assets/images/International_Morse_Code.png"
             alt="Morse code in a picture"
             class="img-morse-code"
         /></span>
-		</div>
-	</div>
+      </div>
+    </div>
 
-	<div class="rules" id="rules">
-		<div>
-			<h4 style="text-align: center;">Rules</h4>
-			<p>The Rules are simple!</p>
-			<p>
-				Click on a card to flip it and reviel an image represantion of a morse
-				code letter and its coresponding sound.
-			</p>
-			<p>If flipped card wont match they it will be fliped back</p>
-			<p>Youre goal is to match all card on the board.</p>
-		</div>
-	</div>
+    <div class="rules" id="rules">
+      <div>
+        <h4 style="text-align: center;">Rules</h4>
+        <p>The Rules are simple!</p>
+        <p>
+          Click on a card to flip it and reviel an image represantion of a morse
+          code letter and its coresponding sound.
+        </p>
+        <p>If flipped card wont match they it will be fliped back</p>
+        <p>Youre goal is to match all card on the board.</p>
+      </div>
+    </div>
 
-	<div class="bgimg-3">
-		<div class="caption">
-			<span>make a gif or little video with example</span>
-		</div>
-	</div>
+    <div class="bgimg-3">
+      <div class="caption">
+        <span>make a gif or little video with example</span>
+      </div>
+    </div>
 
-	<div style="position: relative;">
-		<div style="
+    <div style="position: relative;">
+      <div
+        style="
           color: #ddd;
           background-color: #282e34;
           text-align: center;
           padding: 50px 80px;
-          
-        ">
-			<p>
-				-.-. .... --- --- ... . / -.-- --- ..- .-. / .-.. . ...- . .-.. / .-
-				-. -.. / ... - .- .-. - / - --- / .--. .-.. .- -.-- -.-.--
-			</p>
-		</div>
-	</div>
+        "
+      >
+        <p>
+          <a
+            href="https://morsecode.world/international/translator.html"
+            target="_blank"
+          >
+            .--. .-.. .- -.-- / .- -. -.. / .-.. . .- .-. -. / .- / ..- ... .
+            ..-. ..- .-.. / ... -.- .. .-.. .-.. -.-.--</a
+          >
+        </p>
+      </div>
+    </div>
 
-	<div class="bgimg-1">
-		<div class="caption" id="play">
-			<div class="menu-game">
+    <div class="bgimg-1">
+      <div class="menu-game navbar bg-dark hidde-on-small-screen">
+        Numbers / Letters / Punctuation
+      </div>
 
+      <div class="game-numbers" id="play">
+        <button data-turnable="true" data-number="0" id="1">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="2">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="3">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="4">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="5">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="6">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="7">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="8">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="9">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="10">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="11">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="12">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="13">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="14">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="15">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+        <button data-turnable="true" data-number="0" id="16">
+          <img src="assets/images/card_back.jpg" alt="card back" />
+        </button>
+      <div class="win-container">
+        You win!
+        <a href="#play" class="play-again" onclick="reset()">Play Again</a>
+      </div>
+      </div>
+
+
+      <!--		<div class="game-punctuation">
 			</div>
-			<div class="game-letters">
+            <div class="game-letters">
 			</div>
-			<div class="game-numbers">
-				<button data-turnable="true" data-number="0" id="1">
-        <img src="resources/card_back.jpg" alt="card back"/>
-      </button>
-				<button data-turnable="true" data-number="0" id="2">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="3">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="4">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="5">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="6">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="7">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="8">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="9">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="10">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="11">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="12">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="13">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="14">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="15">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<button data-turnable="true" data-number="0" id="16">
-        <img src="resources/card_back.jpg" alt="card back" />
-      </button>
-				<div class="win-container">
-					You win!
-					<button class="play-again" onclick="reset()">Play Again</button>
-				</div>
-			</div>
-			<div class="game-punctuation">
-			</div>
-		</div>
-	</div>
-	<script>
-		/* Get the documentElement (<html>) to display the page in fullscreen */
+            
+ -->
+    </div>
+    <script>
+      /* Get the documentElement (<html>) to display the page in fullscreen */
       var elem = document.documentElement;
 
       /* View in fullscreen */
@@ -248,11 +267,9 @@
           document.msExitFullscreen();
         }
       }
-	</script>
-
-	/* View in fullscreen */
-	<script>
-		var vid = document.getElementById("myVideo");
+    </script>
+    <script>
+      var vid = document.getElementById("myVideo");
 
       function enableMute() {
         vid.muted = true;
@@ -265,8 +282,7 @@
       function checkMute() {
         alert(vid.muted);
       }
-	</script>
-	<script src="assets/js/numbers.js"></script>
-</body>
-
+    </script>
+    <script src="assets/js/numbers.js"></script>
+  </body>
 </html>
