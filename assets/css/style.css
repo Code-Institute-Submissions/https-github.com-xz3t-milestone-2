@@ -52,7 +52,7 @@ html {
   color: #777;
   background-color: white;
   text-align: center;
-  padding: 25px 40px;
+  padding: 20px 40px;
   text-align: justify;
 }
 
@@ -69,8 +69,18 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
+  background-color: black;
   color: #fff;
+  display: inline;
+  padding: 0.5rem;
+  font-size: 60px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 h3 {
@@ -85,6 +95,42 @@ h3 {
   width: 320px;
 }
 
+.red-button {
+  background-color: #dc3545;
+  border: 1px;
+  color: white;
+  padding: 2px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.yellow-button {
+  background-color: #ffc107;
+  border: none;
+  color: black;
+  padding: 2px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.green-button {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 2px 55px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
 /* navbar align items in the center*/
 
 .navbar-nav {
@@ -93,7 +139,12 @@ h3 {
   text-align: center;
 }
 
-/* game style*/
+.menu-game {
+    text-align: center;
+    padding: 5px 5px;
+}
+
+/* game styling*/
 
 .game-numbers {
   margin: auto;
@@ -146,8 +197,12 @@ h3 {
     display: none !important;
   }
 
-  /* resize images from buttons to fit on a small screen */
-
+  /* resize images from cards to fit on a small screen */
+  .game-numbers {
+    margin: auto;
+    width: 100vw;
+    height: 90vh;
+  }
   .game-numbers img {
     width: 10vh;
     pointer-events: none;
@@ -160,5 +215,15 @@ h3 {
   .bgimg-2,
   .bgimg-3 {
     background-attachment: scroll;
+  }
+
+  h1 {
+    background-color: black;
+    color: #fff;
+    display: inline;
+    padding: 0.5rem;
+    font-size: 40px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 }
