@@ -37,19 +37,21 @@
             ><i class="fas fa-play"></i
             ><span class="hidde-on-small-screen"> Play</span></a
           >
+          <a class="nav-item nav-link" href="#play"
+            ><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i
+            ><span class="hidde-on-small-screen"> Numbers</span></a
+          >
+          <a class="nav-item nav-link" href="#play"
+            ><i class="fa fa-font" aria-hidden="true"></i
+            ><span class="hidde-on-small-screen"> Letters</span></a
+          >
+          <a class="nav-item nav-link" href="#play"
+            ><i class="fa fa-exclamation" aria-hidden="true"></i
+            ><span class="hidde-on-small-screen"> Punctuation</span></a
+          >
           <a class="nav-item nav-link" href="#rules"
             ><i class="far fa-address-card"></i
             ><span class="hidde-on-small-screen"> Rules</span></a
-          >
-          <a class="nav-item nav-link" href="#" onclick="enableMute()"
-            ><span class="hidde-on-small-screen"
-              ><i class="fas fa-volume-up"></i> ON</span
-            ></a
-          >
-          <a class="nav-item nav-link" href="#" onclick="disableMute()"
-            ><span class="hidde-on-small-screen"
-              ><i class="fas fa-volume-mute"></i> OFF</span
-            ></a
           >
           <a class="nav-item nav-link" href="#" onclick="openFullscreen()"
             ><span class="hidde-on-small-screen"
@@ -69,17 +71,17 @@
     <div class="container caption">
       <div class="row">
         <div class="col-md-6">
-          <h1>Be apocalipse ready, learn a usefull skill!</h1>
+          <h1>Be apocalipse ready, learn a necessary skill!</h1>
         </div>
         <div class="col-md-6">
           <p>
-            <a href="#whatis">What's Morse code?</a>
+            <a class="red-button" href="#whatis">What's Morse code?</a>
           </p>
           <p>
-            <a href="#rules">Game Rules.. </a>
+            <a class="yellow-button" href="#rules">Game Rules.. </a>
           </p>
           <p>
-            <a href="#play"> Let me play! </a>
+            <a class="green-button" href="#play"> Let me play! </a>
           </p>
         </div>
       </div>
@@ -165,8 +167,10 @@
     </div>
 
     <div class="bgimg-1">
-      <div class="menu-game navbar bg-dark hidde-on-small-screen">
-        Numbers / Letters / Punctuation
+      <div class="bg-dark hidde-on-small-screen menu-game">
+        <a href="" class="red-button"> Numbers </a>
+        <a href="" class="green-button">Letters</a>
+        <a href="" class="yellow-button">Punctuation</a>
       </div>
 
       <div class="game-numbers" id="play">
@@ -218,12 +222,11 @@
         <button data-turnable="true" data-number="0" id="16">
           <img src="assets/images/card_back.jpg" alt="card back" />
         </button>
-      <div class="win-container">
-        You win!
-        <a href="#play" class="play-again" onclick="reset()">Play Again</a>
+        <div class="win-container">
+          You win!
+          <a href="#play" class="play-again" onclick="reset()">Play Again</a>
+        </div>
       </div>
-      </div>
-
 
       <!--		<div class="game-punctuation">
 			</div>
@@ -269,7 +272,7 @@
       }
     </script>
     <script>
-      var vid = document.getElementById("myVideo");
+      var vid = document.getElementById("play");
 
       function enableMute() {
         vid.muted = true;
