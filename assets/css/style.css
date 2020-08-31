@@ -18,18 +18,18 @@ html {
   background-size: cover;
 }
 .bgimg-1 {
-  background-image: url("/assets/images/morse-code1.jpg");
+  background-image: url("../images/morse-code1.jpg");
   min-height: 100%;
 }
 
 .bgimg-2 {
-  background-image: url("/assets/images/morse-code2.jpg");
+  background-image: url("../images/morse-code2.jpg");
   min-height: 500px;
   text-align: right;
 }
 
 .bgimg-3 {
-  background-image: url("/assets/images/morse-code3.jpg");
+  background-image: url("../images/morse-code3.jpg");
   min-height: 400px;
 }
 
