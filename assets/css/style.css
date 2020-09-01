@@ -118,6 +118,12 @@ h3 {
   border-radius: 5px;
 }
 
+.red-button:hover {
+  background-color: red;
+  text-decoration: none;
+  color: black;
+}
+
 .yellow-button {
   background-color: #ffc107;
   border: none;
@@ -128,6 +134,11 @@ h3 {
   display: inline-block;
   font-size: 16px;
   border-radius: 5px;
+}
+.yellow-button:hover {
+  background-color: yellow;
+  text-decoration: none;
+  color: black;
 }
 
 .green-button {
@@ -142,6 +153,12 @@ h3 {
   border-radius: 5px;
 }
 
+.green-button:hover {
+  background-color: green;
+  text-decoration: none;
+  color: black;
+}
+
 /* navbar align items in the center*/
 
 .navbar-nav {
@@ -151,8 +168,8 @@ h3 {
 }
 
 .menu-game {
-    text-align: center;
-    padding: 5px 5px;
+  text-align: center;
+  padding: 5px 5px;
 }
 
 /* game styling*/
@@ -227,7 +244,7 @@ h3 {
   .bgimg-3 {
     background-attachment: scroll;
   }
-/* resize to fit small screens*/
+  /* resize to fit small screens*/
   h1 {
     background-color: black;
     color: #fff;
