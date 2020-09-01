@@ -227,15 +227,9 @@
           <a href="#play" class="play-again" onclick="reset()">Play Again</a>
         </div>
       </div>
-
-      <!--		<div class="game-punctuation">
-			</div>
-            <div class="game-letters">
-			</div>
-            
- -->
     </div>
     <script>
+      /* https://www.w3schools.com/howto/howto_js_fullscreen.asp */
       /* Get the documentElement (<html>) to display the page in fullscreen */
       var elem = document.documentElement;
 
@@ -269,21 +263,6 @@
           /* IE/Edge */
           document.msExitFullscreen();
         }
-      }
-    </script>
-    <script>
-      var vid = document.getElementById("play");
-
-      function enableMute() {
-        vid.muted = true;
-      }
-
-      function disableMute() {
-        vid.muted = false;
-      }
-
-      function checkMute() {
-        alert(vid.muted);
       }
     </script>
     <script src="assets/js/numbers.js"></script>
