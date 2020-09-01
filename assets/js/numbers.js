@@ -4,7 +4,7 @@ var lastKnownButtonNumber = undefined;
 var wait = false;
 var matches = 0;
 
-var buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll("button");
 
 //code
 numbers = getRandom(numbers, 8);
@@ -12,9 +12,8 @@ shuffle(numbers);
 distributeNumbers();
 
 for (i = 0; i < buttons.length; i++) {
-  // buttons[i].setAttribute("onclick", getSound(buttons[i].dataset.number)); moved to distributeNumbers function
   buttons[i].addEventListener("click", function (e) {
-    var turnable = e.target.dataset.turnable;
+    let turnable = e.target.dataset.turnable;
 
     //action for first click
     if (
@@ -72,7 +71,7 @@ for (i = 0; i < buttons.length; i++) {
           e.target.style.backgroundColor = "white";
           e.target.innerHTML = getgImage(0);
 
-          var tempLastClickedButton = document.getElementById(
+          let tempLastClickedButton = document.getElementById(
             lastKnownButtonId
           );
 
