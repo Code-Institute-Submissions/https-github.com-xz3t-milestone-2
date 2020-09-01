@@ -6,89 +6,97 @@ var matches = 0;
 
 const buttons = document.querySelectorAll("button");
 
-//code
-numbers = getRandom(numbers, 8);
-shuffle(numbers);
-distributeNumbers();
+// run intialization script
+function runGame() {
+  numbers = getRandom(numbers, 8); //get 8 random numbers from 0-9
+  shuffle(numbers);
+  distributeNumbers();
 
-for (i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", function (e) {
-    let turnable = e.target.dataset.turnable;
+  for (i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function (e) {
+      let turnable = e.target.dataset.turnable;
 
-    //action for first click
-    if (
-      !wait &&
-      lastKnownButtonId == undefined &&
-      lastKnownButtonNumber == undefined &&
-      turnable == "true"
-    ) {
-      e.target.dataset.turnable = "false";
-
-      e.target.innerHTML = getgImage(event.target.dataset.number);
-      e.target.style.backgroundColor = "orange";
-
-      lastKnownButtonId = e.target.id;
-      lastKnownButtonNumber = e.target.dataset.number;
-    }
-
-    //action for second click
-    else if (
-      !wait &&
-      lastKnownButtonId != undefined &&
-      lastKnownButtonNumber != undefined &&
-      turnable == "true" &&
-      e.target.id != lastKnownButtonId
-    ) {
-      e.target.dataset.turnable = "false";
-
-      e.target.innerHTML = getgImage(event.target.dataset.number);
-
-      //if its a match
-      if (e.target.dataset.number == lastKnownButtonNumber) {
-        e.target.style.backgroundColor = "green";
-        document.getElementById(lastKnownButtonId).style.backgroundColor =
-          "green";
-
-        lastKnownButtonId = undefined;
-        lastKnownButtonNumber = undefined;
-
-        matches++;
-
-        if (matches == 8) {
-          showWinScreen();
-        }
+      if (
+        !wait &&
+        lastKnownButtonId == undefined &&
+        lastKnownButtonNumber == undefined &&
+        turnable == "true"
+      ) {
+        executeOnFirstClick(e); //
       }
 
-      //if its not a match
-      else {
-        document.getElementById(lastKnownButtonId).style.backgroundColor =
-          "red";
-        e.target.style.backgroundColor = "red";
-        wait = true;
-
-        setTimeout(() => {
-          e.target.dataset.turnable = "true";
-          e.target.style.backgroundColor = "white";
-          e.target.innerHTML = getgImage(0);
-
-          let tempLastClickedButton = document.getElementById(
-            lastKnownButtonId
-          );
-
-          tempLastClickedButton.dataset.turnable = "true";
-          tempLastClickedButton.style.backgroundColor = "white";
-          tempLastClickedButton.innerHTML = getgImage(0);
-
-          lastKnownButtonId = undefined;
-          lastKnownButtonNumber = undefined;
-          wait = false;
-        }, 1500);
+      //action for second click
+      else if (
+        !wait &&
+        lastKnownButtonId != undefined &&
+        lastKnownButtonNumber != undefined &&
+        turnable == "true" &&
+        e.target.id != lastKnownButtonId
+      ) {
+        executeOnSecondClick(e);
       }
-    }
-  });
+    });
+  }
 }
 
-//functions
+function executeOnFirstClick(e) {
+  e.target.dataset.turnable = "false"; //set turnable false so this card cant be clicked again
+
+  e.target.innerHTML = getgImage(event.target.dataset.number); //turn the image
+  e.target.style.backgroundColor = "orange"; // change background to orange
+
+  lastKnownButtonId = e.target.id;
+  lastKnownButtonNumber = e.target.dataset.number; // save turned card for matching on executeOnSecondClick function
+}
+
+function executeOnSecondClick(e) {
+  e.target.dataset.turnable = "false"; //set turnable false so this card cant be clicked again
+
+  e.target.innerHTML = getgImage(event.target.dataset.number); //turn the image
+
+  if (e.target.dataset.number == lastKnownButtonNumber) {
+    executeOnMatch(e);
+  } else {
+    executeOnMismatch(e);
+  }
+}
+
+function executeOnMatch(e) {
+  e.target.style.backgroundColor = "green"; //set 2nd turned card green background
+  document.getElementById(lastKnownButtonId).style.backgroundColor = "green"; // set 1st turned card green background
+
+  lastKnownButtonId = undefined;
+  lastKnownButtonNumber = undefined;
+
+  matches++;
+
+  if (matches == 8) {
+    showWinScreen(); // when 8 matches show win screen with reset button
+  }
+}
+
+function executeOnMismatch(e) {
+  document.getElementById(lastKnownButtonId).style.backgroundColor = "red"; //set 1st turned card red background
+  e.target.style.backgroundColor = "red"; //set 2nd turned card red background
+  wait = true;
+
+  //create a delay between clicking on cards (delay also needed for sound to play for the card)
+  setTimeout(() => {
+    e.target.dataset.turnable = "true";
+    e.target.style.backgroundColor = "white";
+    e.target.innerHTML = getgImage(0);
+
+    let tempLastClickedButton = document.getElementById(lastKnownButtonId);
+
+    tempLastClickedButton.dataset.turnable = "true";
+    tempLastClickedButton.style.backgroundColor = "white";
+    tempLastClickedButton.innerHTML = getgImage(0);
+
+    lastKnownButtonId = undefined;
+    lastKnownButtonNumber = undefined;
+    wait = false;
+  }, 1500);
+}
 
 function reset() {
   lastKnownButtonId = undefined;
@@ -97,7 +105,7 @@ function reset() {
   shuffle(numbers);
   distributeNumbers();
   matches = 0;
-  
+
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].innerHTML = getgImage(0);
     buttons[i].style.backgroundColor = "white";
@@ -116,11 +124,14 @@ function reset() {
 function showWinScreen() {
   document.querySelector(".win-container").style.display = "flex";
 
+  // hide cards to display win screen
   document.getElementById("6").style.display = "none";
   document.getElementById("7").style.display = "none";
   document.getElementById("10").style.display = "none";
   document.getElementById("11").style.display = "none";
 }
+
+// return an image for each number
 
 function getgImage(number) {
   switch (number) {
@@ -148,6 +159,8 @@ function getgImage(number) {
       return '<img src="assets/images/card_back.jpg">';
   }
 }
+
+//return a sound for each number
 
 function getSound(number) {
   switch (number) {
@@ -180,16 +193,17 @@ function playAudio(url) {
   new Audio(url).play();
 }
 
+//set the sound and images for each card
+
 function distributeNumbers() {
   for (i = 0; i < buttons.length; i++) {
     buttons[i].dataset.number = numbers[i];
-    buttons[i].dataset.turnable = "true";
-    buttons[i].setAttribute("onclick", getSound(buttons[i].dataset.number)); //getgsound(0)
+    buttons[i].dataset.turnable = "true"; // change to true so card can be turned again
+    buttons[i].setAttribute("onclick", getSound(buttons[i].dataset.number)); // asign sounds to each card
   }
 }
 
-//get 8 random and double selected number in new array
-
+//get array of 0-9 numbers and pick 8 numbers
 function getRandom(arr, n) {
   var m = n * 2;
   var result = new Array(n),
@@ -200,6 +214,8 @@ function getRandom(arr, n) {
     result[n] = arr[x in taken ? taken[x] : x];
     taken[x] = --len in taken ? taken[len] : len;
   }
+
+  //create new array with double the size of initial array
   var i,
     j = 0;
   var resultDouble = new Array(m);
@@ -211,6 +227,7 @@ function getRandom(arr, n) {
   return resultDouble;
 }
 
+//shuffle the array
 function shuffle(array) {
   var j, x, i;
   for (i = array.length - 1; i > 0; i--) {
