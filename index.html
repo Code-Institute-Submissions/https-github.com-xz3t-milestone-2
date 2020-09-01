@@ -32,11 +32,11 @@
             ><i class="fas fa-home"></i>
             <span class="hidde-on-small-screen">Home</span>
           </a>
-          <a class="nav-item nav-link" href="#play"
+          <a class="nav-item nav-link" href="#play"  onclick="runGame()"
             ><i class="fas fa-play"></i
             ><span class="hidde-on-small-screen"> Play</span></a
           >
-          <a class="nav-item nav-link" href="#play"
+          <a class="nav-item nav-link" href="#play" onclick="runGame()"
             ><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i
             ><span class="hidde-on-small-screen"> Numbers</span></a
           >
@@ -80,7 +80,7 @@
             <a class="yellow-button" href="#rules">Game Rules.. </a>
           </p>
           <p>
-            <a class="green-button" href="#play"> Let me play! </a>
+            <a class="green-button" href="#play" onclick="runGame()"> Let me play! </a>
           </p>
         </div>
       </div>
@@ -156,7 +156,7 @@
 
     <div class="bgimg-1">
       <div class="bg-dark hidde-on-small-screen menu-game">
-        <a href="" class="red-button"> Numbers </a>
+        <a href="#play" class="red-button" onclick="runGame()"> Numbers </a>
         <a href="" class="green-button">Letters</a>
         <a href="" class="yellow-button">Punctuation</a>
       </div>
