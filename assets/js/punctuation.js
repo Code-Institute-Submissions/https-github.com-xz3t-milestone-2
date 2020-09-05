@@ -7,7 +7,7 @@ var matches = 0;
 const buttons = document.querySelectorAll("button");
 
 // run intialization script
-function runGame() {
+function initGame() {
   numbers = getRandom(numbers, 8); //get 8 random numbers from 0-9
   shuffle(numbers);
   distributeNumbers();

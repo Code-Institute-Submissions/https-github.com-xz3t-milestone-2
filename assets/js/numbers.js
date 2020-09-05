@@ -7,7 +7,7 @@ var matches = 0;
 const buttons = document.querySelectorAll("button");
 
 // run intialization script
-function runGame() {
+function initGame() {
   numbers = getRandom(numbers, 8); //get 8 random numbers from 0-9
   shuffle(numbers);
   distributeNumbers();
@@ -130,6 +130,35 @@ function showWinScreen() {
   document.getElementById("10").style.display = "none";
   document.getElementById("11").style.display = "none";
 }
+
+/* tried if instead of switch for jasmin testing cant get it working return just default value
+
+function getgImage(number) {
+  if ((number = 0)) {
+    return '<img src="assets/images/card_0.jpg">';
+  } else if ((number = 1)) {
+    return '<img src="assets/images/card_1.jpg">';
+  } else if ((number = 2)) {
+    return '<img src="assets/images/card_2.jpg">';
+  } else if ((number = 3)) {
+    return '<img src="assets/images/card_3.jpg">';
+  } else if ((number = 4)) {
+    return '<img src="assets/images/card_4.jpg">';
+  } else if ((number = 5)) {
+    return '<img src="assets/images/card_5.jpg">';
+  } else if ((number = 6)) {
+    return '<img src="assets/images/card_6.jpg">';
+  } else if ((number = 7)) {
+    return '<img src="assets/images/card_7.jpg">';
+  } else if ((number = 8)) {
+    return '<img src="assets/images/card_8.jpg">';
+  } else if ((number = 9)) {
+    return '<img src="assets/images/card_9.jpg">';
+  } else {
+    return '<img src="assets/images/card_back.jpg">';
+  }
+}
+*/
 
 // return an image for each number
 
