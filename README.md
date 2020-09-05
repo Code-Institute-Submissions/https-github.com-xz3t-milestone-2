@@ -62,8 +62,8 @@ a
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://validator.w3.org/#validate_by_input) - [Results](https://xz3t.github.io/milestone-2/docs/Showing results for contents of text-input area - Nu Html Checker.html)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://xz3t.github.io/milestone-2/docs/W3C CSS Validator results for TextArea (CSS level 3 + SVG).html)
+-   [W3C Markup Validator](https://validator.w3.org/#validate_by_input) - [Results](https://xz3t.github.io/milestone-2/docs/Showing%results%for%contents%of%text-input%area%-%Nu%Html%Checker.html)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://xz3t.github.io/milestone-2/docs/W3C%CSS%Validator%results%for%TextArea%(CSS%level%3%+%SVG).html)
 
 ### Testing User Stories from User Experience (UX) Section
 
