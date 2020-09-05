@@ -88,7 +88,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone5S, iPhone 6, Nokia 5 & Pixel3a.
 -   Friends were asked to review the site and play the game to point out any bugs and/or user experience issues.
 
--   Jasime testing was atempted on a few function with if statments and switch returning just the default value, unfortunatly did not have time to adress it.
+-   Jasmine testing was atempted on a few function with if statments and switch returning just the default value, unfortunatly did not have time to adress it.
     (https://xz3t.github.io/milestone-2/spec/numbers.html)
 
 ### Known Bugs
@@ -151,7 +151,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
--   Starting point of the game script was taken and adapted to need from: (https://github.com/SanderCokart/javascript-memory-game)
+-   Starting point of the game script was taken and adapted to my needs from: (https://github.com/SanderCokart/javascript-memory-game)
 
 ### Media
 
@@ -163,7 +163,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 -   My Mentor for continuous helpful feedback.
 
 
-Links:
+### Links:
 
 https://www.w3schools.com/howto/howto_css_parallax.asp
 
