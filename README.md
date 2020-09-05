@@ -2,7 +2,7 @@
 
 [View the live project here.](https://xz3t.github.io/milestone-2/)
 
-This is memory game with an objective to spark some interest and teach a bit of morse code. It is designed to be responsibe and accessible on a range of devices, so its easy to play on the go.
+This is memory game with an objective to spark some interest and teach a bit of Morse code. It is designed to be responsive and accessible on a range of devices, so its easy to play on the go.
 
 <h2 align="center"><img src="https://xz3t.github.io/milestone-2/docs/preview.jpg"></h2>
 a
@@ -12,16 +12,16 @@ a
 
   
         1. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-        2. As a Returning Visitor, I want to be able to have acces to enought content that will keep me playing for a longer period. 
+        2. As a Returning Visitor, I want to be able to have access to enough content that will keep me playing for a longer period. 
  
 
 -   ### Design
-    -   #### Colour Scheme
-        -   Colors used for text are b&w on b&w and sephia backgrounds to have a vintage theme, buttons are colorfull for contrast.
+    -   #### Color Scheme
+        -   Colors used for text are b&w on b&w and sephia backgrounds to have a vintage theme, buttons are colorful for contrast.
     -   #### Typography
         -   The Lato with a fallback to Sans Serif font is used on the whole website.
     -   #### Imagery
-        -   Images used are representative of the Morse Code theme and are black and white/ sephia efects.
+        -   Images used are representative of the Morse Code theme and are black and white/ sephia effects.
 
 *   ### Wireframes
 
@@ -71,17 +71,17 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   #### Jasmine testing
 
 -   Successfully tested getgImage() and getSound() function in number and letters scripts:
-   numbers: (https://xz3t.github.io/milestone-2/spec/numbers.html)
-   letters: (https://xz3t.github.io/milestone-2/spec/letters.html)
+   - numbers: (https://xz3t.github.io/milestone-2/spec/numbers.html)
+   - letters: (https://xz3t.github.io/milestone-2/spec/letters.html)
 
 
 -   #### First Time Visitor Goals
 
     1. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
 
-        1. Upon entering the site, users is on homegame with clean design, with navigation bar and 3 buttons to whatis/rules and the game itself.
+        1. Upon entering the site, users is on homepage with clean design, with navigation bar and 3 buttons to whatis/rules and the game itself.
         2. The user has two options, click the call to action buttons or scroll down, both of which will lead to the same places.
-        3. At the bottom of viewport there is navigation menu to ensure the user has always acces to all areas of the page.
+        3. At the bottom of viewport there is navigation menu to ensure the user has always access to all areas of the page.
         4. At the bottom of the page it is the game.
 
 -   #### Returning Visitor Goals
@@ -101,7 +101,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   on small mobile devices game area may be wider than the rest of the page and it breaks the intended view. 
 -   by default sound will play as loud as the device is set up
--   link in morse code left as the line without styling to get people to click on it, but it is just geting to the page it can be trasnlated withot copyiing itself to buffer.
+-   link in Morse code left as the line without styling to get people to click on it, but it is just getting to the page it can be trasnlated without copyiing itself to buffer.
 
 ## Deployment
 
@@ -163,6 +163,10 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   All Images card images were created by the developer.
 -   Sounds were downloaded from wiki page on morse code 
+-   other images used in project: 
+        - https://2.bp.blogspot.com/-_3whB542d6g/WIqjUtWPjPI/AAAAAAAAdOw/yUL9eCdKiAglZF1dmwvkuTiK2mmbVGQdgCEw/s640/skn-1.jpg
+        - https://i1.wp.com/www.sporcle.com/blog/wp-content/uploads/2018/10/1-38.jpg?resize=1280%2C720&ssl=1
+        - https://www.daysoftheyear.com/cdn-cgi/image/fit=cover,f=auto,onerror=redirect,width=866,height=434/wp-content/uploads/morse-code-day1-e1556102421598-scaled.jpg
 
 ### Acknowledgements
 
