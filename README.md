@@ -71,8 +71,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   #### Jasmine testing
 
 -   Successfully tested getgImage() and getSound() function in number and letters scripts:
-   - numbers: (https://xz3t.github.io/milestone-2/spec/numbers.html)
-   - letters: (https://xz3t.github.io/milestone-2/spec/letters.html)
+   1. numbers: (https://xz3t.github.io/milestone-2/spec/numbers.html)
+   2. letters: (https://xz3t.github.io/milestone-2/spec/letters.html)
 
 
 -   #### First Time Visitor Goals
@@ -164,9 +164,9 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 -   All Images card images were created by the developer.
 -   Sounds were downloaded from wiki page on morse code 
 -   other images used in project: 
-        - https://2.bp.blogspot.com/-_3whB542d6g/WIqjUtWPjPI/AAAAAAAAdOw/yUL9eCdKiAglZF1dmwvkuTiK2mmbVGQdgCEw/s640/skn-1.jpg
-        - https://i1.wp.com/www.sporcle.com/blog/wp-content/uploads/2018/10/1-38.jpg?resize=1280%2C720&ssl=1
-        - https://www.daysoftheyear.com/cdn-cgi/image/fit=cover,f=auto,onerror=redirect,width=866,height=434/wp-content/uploads/morse-code-day1-e1556102421598-scaled.jpg
+        1. https://2.bp.blogspot.com/-_3whB542d6g/WIqjUtWPjPI/AAAAAAAAdOw/yUL9eCdKiAglZF1dmwvkuTiK2mmbVGQdgCEw/s640/skn-1.jpg
+        2. https://i1.wp.com/www.sporcle.com/blog/wp-content/uploads/2018/10/1-38.jpg?resize=1280%2C720&ssl=1
+        3. https://www.daysoftheyear.com/cdn-cgi/image/fit=cover,f=auto,onerror=redirect,width=866,height=434/wp-content/uploads/morse-code-day1-e1556102421598-scaled.jpg
 
 ### Acknowledgements
 
