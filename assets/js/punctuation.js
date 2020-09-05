@@ -136,7 +136,7 @@ function showWinScreen() {
 function getgImage(number) {
   switch (number) {
     case "0":
-      return '<img src="assets/images/card_Ampersand.jpg">';
+      return '<img src="assets/images/card_Ampresand.jpg">';
     case "1":
       return '<img src="assets/images/card_Apostrope.jpg">';
     case "2":
