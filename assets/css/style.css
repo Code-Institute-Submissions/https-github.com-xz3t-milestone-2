@@ -95,7 +95,6 @@ h1 {
   display: inline;
   padding: 0.5rem;
   font-size: 60px;
-  -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 
@@ -233,7 +232,7 @@ h4 {
   /* resize images from cards to fit on a small screen */
   .game-numbers {
     margin: auto;
-    width: 100vw;
+    width: 97vw;
     height: 90vh;
   }
   .game-numbers img {
@@ -243,7 +242,7 @@ h4 {
 }
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .bgimg-1,
   .bgimg-2,
   .bgimg-3 {
@@ -256,7 +255,6 @@ h4 {
     display: inline;
     padding: 0.5rem;
     font-size: 40px;
-    -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
   }
 }
