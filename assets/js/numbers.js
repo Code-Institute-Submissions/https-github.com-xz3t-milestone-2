@@ -131,35 +131,6 @@ function showWinScreen() {
   document.getElementById("11").style.display = "none";
 }
 
-/* tried if instead of switch for jasmin testing cant get it working return just default value
-
-function getgImage(number) {
-  if ((number = 0)) {
-    return '<img src="assets/images/card_0.jpg">';
-  } else if ((number = 1)) {
-    return '<img src="assets/images/card_1.jpg">';
-  } else if ((number = 2)) {
-    return '<img src="assets/images/card_2.jpg">';
-  } else if ((number = 3)) {
-    return '<img src="assets/images/card_3.jpg">';
-  } else if ((number = 4)) {
-    return '<img src="assets/images/card_4.jpg">';
-  } else if ((number = 5)) {
-    return '<img src="assets/images/card_5.jpg">';
-  } else if ((number = 6)) {
-    return '<img src="assets/images/card_6.jpg">';
-  } else if ((number = 7)) {
-    return '<img src="assets/images/card_7.jpg">';
-  } else if ((number = 8)) {
-    return '<img src="assets/images/card_8.jpg">';
-  } else if ((number = 9)) {
-    return '<img src="assets/images/card_9.jpg">';
-  } else {
-    return '<img src="assets/images/card_back.jpg">';
-  }
-}
-*/
-
 // return an image for each number
 
 function getgImage(number) {
@@ -234,20 +205,20 @@ function distributeNumbers() {
 
 //get array of 0-9 numbers and pick 8 numbers
 function getRandom(arr, n) {
-  var m = n * 2;
-  var result = new Array(n),
+  let m = n * 2;
+  let result = new Array(n),
     len = arr.length,
     taken = new Array(len);
   while (n--) {
-    var x = Math.floor(Math.random() * len);
+    let x = Math.floor(Math.random() * len);
     result[n] = arr[x in taken ? taken[x] : x];
     taken[x] = --len in taken ? taken[len] : len;
   }
 
   //create new array with double the size of initial array
-  var i,
+  let i,
     j = 0;
-  var resultDouble = new Array(m);
+  let resultDouble = new Array(m);
   for (i = 0; i < result.length; i++) {
     resultDouble[j] = result[i];
     resultDouble[j + 1] = result[i];
@@ -258,7 +229,7 @@ function getRandom(arr, n) {
 
 //shuffle the array
 function shuffle(array) {
-  var j, x, i;
+  let j, x, i;
   for (i = array.length - 1; i > 0; i--) {
     j = Math.floor(Math.random() * (i + 1));
     x = array[i];

@@ -8,7 +8,7 @@ const buttons = document.querySelectorAll("button");
 
 // run intialization script
 function initGame() {
-  numbers = getRandom(numbers, 8); //get 8 random numbers from 0-9
+  numbers = getRandom(numbers, 8); //get 8 random numbers from 0-16
   shuffle(numbers);
   distributeNumbers();
 
@@ -233,20 +233,20 @@ function distributeNumbers() {
 
 //get array of 0-9 numbers and pick 8 numbers
 function getRandom(arr, n) {
-  var m = n * 2;
-  var result = new Array(n),
+  let m = n * 2;
+  let result = new Array(n),
     len = arr.length,
     taken = new Array(len);
   while (n--) {
-    var x = Math.floor(Math.random() * len);
+    let x = Math.floor(Math.random() * len);
     result[n] = arr[x in taken ? taken[x] : x];
     taken[x] = --len in taken ? taken[len] : len;
   }
 
   //create new array with double the size of initial array
-  var i,
+  let i,
     j = 0;
-  var resultDouble = new Array(m);
+  let resultDouble = new Array(m);
   for (i = 0; i < result.length; i++) {
     resultDouble[j] = result[i];
     resultDouble[j + 1] = result[i];
@@ -257,7 +257,7 @@ function getRandom(arr, n) {
 
 //shuffle the array
 function shuffle(array) {
-  var j, x, i;
+  let j, x, i;
   for (i = array.length - 1; i > 0; i--) {
     j = Math.floor(Math.random() * (i + 1));
     x = array[i];
