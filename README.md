@@ -25,9 +25,9 @@ a
 
 *   ### Wireframes
 
-    -   Destop Page Wireframe - [View](https://github.com/)
+    -   Destop/Mobile Page sketch - [View](https://xz3t.github.io/milestone-2/docs/wireframes_desk_mobile.jpg)
 
-    -   Mobile Wireframe - [View](https://github.com/)
+    -   Navbar sketch - [View](https://xz3t.github.io/milestone-2/docs/wireframes_navbar.jpg)
 
 
 ## Features
@@ -56,7 +56,8 @@ a
     - GitHub is used to store the projects code after being pushed from Git.
 5. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
     - Photoshop was used to create the logo, resizing images and editing photos for the website.
-
+6. [Jasmine](https://jasmine.github.io/)
+    - Jasmine is a behavior-driven development framework for testing JavaScript code.
 
 ## Testing
 
@@ -66,6 +67,13 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://xz3t.github.io/milestone-2/docs/W3C%20CSS%20Validator%20results%20for%20TextArea%20(CSS%20level%203%20+%20SVG).html)
 
 ### Testing User Stories from User Experience (UX) Section
+
+-   #### Jasmine testing
+
+-   Successfully tested getgImage() and getSound() function in number and letters scripts:
+   numbers: (https://xz3t.github.io/milestone-2/spec/numbers.html)
+   letters: (https://xz3t.github.io/milestone-2/spec/letters.html)
+
 
 -   #### First Time Visitor Goals
 
@@ -88,14 +96,12 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone5S, iPhone 6, Nokia 5 & Pixel3a.
 -   Friends were asked to review the site and play the game to point out any bugs and/or user experience issues.
 
--   Jasmine testing was atempted on a few function with if statments and switch returning just the default value, unfortunatly did not have time to adress it.
-    (https://xz3t.github.io/milestone-2/spec/numbers.html)
 
 ### Known Bugs
 
 -   on small mobile devices game area may be wider than the rest of the page and it breaks the intended view. 
--   sound will play as loud as the device is set up
--   morse code link left a the lin iwthout styling to get people to click on it, but it is just geting to the page it can be trasnlated withot copyiing itself to buffer.
+-   by default sound will play as loud as the device is set up
+-   link in morse code left as the line without styling to get people to click on it, but it is just geting to the page it can be trasnlated withot copyiing itself to buffer.
 
 ## Deployment
 
@@ -156,11 +162,11 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Media
 
 -   All Images card images were created by the developer.
--   Sounds were copied from wiki page on morse code 
+-   Sounds were downloaded from wiki page on morse code 
 
 ### Acknowledgements
 
--   My Mentor for continuous helpful feedback.
+-   My Mentor for continuous constructive feedback.
 
 
 ### Links:
