@@ -3,6 +3,7 @@ var lastKnownButtonId = undefined;
 var lastKnownButtonNumber = undefined;
 var wait = false;
 var matches = 0;
+var playSound = false;
 
 const buttons = document.querySelectorAll("button");
 
@@ -188,10 +189,24 @@ function getSound(number) {
       return " ";
   }
 }
+function mute(){
+	playSound = false;
+}
+
+function unMute(){
+	playSound = true;
+}
+
 
 function playAudio(url) {
-  new Audio(url).play();
+	if (playSound  == true) {
+ 	 new Audio(url).play();
+	}
+	else { 
+	playSound == false
 }
+}
+
 
 //set the sound and images for each card
 
@@ -238,3 +253,4 @@ function shuffle(array) {
   }
   return array;
 }
+

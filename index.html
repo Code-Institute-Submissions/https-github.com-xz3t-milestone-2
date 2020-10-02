@@ -33,6 +33,10 @@
               ><i class="fas fa-expand"></i> Full Screen</span></a>
 				<a class="nav-item nav-link" href="#" onclick="closeFullscreen()"><span class="hidde-on-small-screen"
               ><i class="fas fa-compress"></i> Exit Full Screen</span></a>
+              <a class="nav-item nav-link" href="#play" onclick="mute()"><span class="hidde-on-small-screen"
+              ><i class="fas fa-volume-mute"></i> Mute</span></a>
+              <a class="nav-item nav-link" href="#play" onclick="unMute()"><span class="hidde-on-small-screen"
+              ><i class="fas fa-volume-up"></i> unMute</span></a>
 			</div>
 		</div>
 	</nav>
@@ -81,7 +85,6 @@
 			</li>
 		</ul>
 	</div>
-
 	<div class="bgimg-2">
 		<div>
 			<span
@@ -92,7 +95,6 @@
         /></span>
 		</div>
 	</div>
-
 	<div class="rules" id="rules">
 		<div>
 			<h4>Rules</h4>
@@ -124,7 +126,6 @@
 			<a href="letters.html#play" class="green-button">Letters</a>
 			<a href="punctuation.html#play" class="yellow-button">Punctuation</a>
 		</div>
-
 		<div class="game-numbers" id="play">
 			<button data-turnable="true" data-number="0" id="1">
           <img src="assets/images/card_back.jpg" alt="card back" />
