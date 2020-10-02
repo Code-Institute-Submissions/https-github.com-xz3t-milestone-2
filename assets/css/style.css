@@ -192,6 +192,7 @@ h4 {
   height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-bottom: 10px;
 }
 
 .game-numbers button {
