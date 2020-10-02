@@ -284,16 +284,7 @@ h4 {
 }
 
 @media only screen and (max-width: 340px) {
-  .hidde-on-small-screen {
-    display: none !important;
-  }
 
-  /* resize images from cards to fit on a small screen */
-  .game-numbers {
-    margin: auto;
-    width: 90vw;
-    height: 90vh;
-  }
   .game-numbers img {
     width: 4vh;
     pointer-events: none;
