@@ -277,6 +277,10 @@ h4 {
     width: 6vh;
     pointer-events: none;
   }
+ .img-morse-code {
+  height: 346px;
+  width: 246px;
+}
 }
 
 @media only screen and (max-width: 340px) {
