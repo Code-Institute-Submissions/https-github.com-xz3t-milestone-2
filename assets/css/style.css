@@ -224,23 +224,6 @@ h4 {
   text-decoration: none;
 }
 
-/* hide text from navbar on small screens, hide full screen and sound as its easy to control on mobile deivice */
-@media only screen and (max-width: 767px) {
-  .hidde-on-small-screen {
-    display: none !important;
-  }
-
-  /* resize images from cards to fit on a small screen */
-  .game-numbers {
-    margin: auto;
-    width: 97vw;
-    height: 90vh;
-  }
-  .game-numbers img {
-    width: 10vh;
-    pointer-events: none;
-  }
-}
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-width: 1024px) {
@@ -257,5 +240,58 @@ h4 {
     padding: 0.5rem;
     font-size: 40px;
     box-decoration-break: clone;
+  }
+}
+
+/* hide text from navbar on small screens, hide full screen and sound as its easy to control on mobile deivice */
+@media only screen and (max-width: 767px) {
+  .hidde-on-small-screen {
+    display: none !important;
+  }
+
+  /* resize images from cards to fit on a small screen */
+  .game-numbers {
+    margin: auto;
+    width: 95vw;
+    height: 90vh;
+  }
+  .game-numbers img {
+    width: 9vh;
+    pointer-events: none;
+  }
+}
+
+/* hide text from navbar on small screens, hide full screen and sound as its easy to control on mobile deivice, reduce card size*/
+@media only screen and (max-width: 480px) {
+  .hidde-on-small-screen {
+    display: none !important;
+  }
+
+  /* resize images from cards to fit on a small screen */
+  .game-numbers {
+    margin: auto;
+    width: 90vw;
+    height: 90vh;
+  }
+  .game-numbers img {
+    width: 6vh;
+    pointer-events: none;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .hidde-on-small-screen {
+    display: none !important;
+  }
+
+  /* resize images from cards to fit on a small screen */
+  .game-numbers {
+    margin: auto;
+    width: 90vw;
+    height: 90vh;
+  }
+  .game-numbers img {
+    width: 4vh;
+    pointer-events: none;
   }
 }
