@@ -132,7 +132,7 @@ function showWinScreen() {
   document.getElementById("11").style.display = "none";
 }
 
-// return an image for each number
+//will return a string for each number from array with acording image for Letters game
 
 function getgImage(number) {
   switch (number) {
@@ -172,7 +172,7 @@ function getgImage(number) {
   }
 }
 
-//return a sound for each number
+//will return a string for each number from array with acording sound for Numbers game
 
 function getSound(number) {
   switch (number) {
@@ -211,6 +211,8 @@ function getSound(number) {
       break;
   }
 }
+
+//will return a string for each number from array with acording image for Letters game
 
 function getgLetterImage(number) {
   switch (number) {
@@ -298,7 +300,7 @@ function getgLetterImage(number) {
   }
 }
 
-//return a sound for each number
+//will return a string for each number from array with acording sound for Letters game
 
 function getLettersSound(number) {
   switch (number) {
@@ -386,25 +388,143 @@ function getLettersSound(number) {
   }
 }
 
+//will return a string for each number from array with acording image for punctuation game
 
-function mute(){
-	playSound = false;
+function getgPunctuationImage(number) {
+  switch (number) {
+    case "0":
+      return '<img src="assets/images/card_Ampresand.jpg">';
+      break;
+    case "1":
+      return '<img src="assets/images/card_Apostrope.jpg">';
+      break;
+    case "2":
+      return '<img src="assets/images/card_At.jpg">';
+      break;
+    case "3":
+      return '<img src="assets/images/card_Colon.jpg">';
+      break;
+    case "4":
+      return '<img src="assets/images/card_Comma.jpg">';
+      break;
+    case "5":
+      return '<img src="assets/images/card_Dollar.jpg">';
+      break;
+    case "6":
+      return '<img src="assets/images/card_Equals.jpg">';
+      break;
+    case "7":
+      return '<img src="assets/images/card_Exclamation.jpg">';
+      break;
+    case "8":
+      return '<img src="assets/images/card_Hyphen.jpg">';
+      break;
+    case "9":
+      return '<img src="assets/images/card_ParanthesisClose.jpg">';
+      break;
+    case "10":
+      return '<img src="assets/images/card_ParanthesisOpen.jpg">';
+      break;
+    case "11":
+      return '<img src="assets/images/card_Period.jpg">';
+      break;
+    case "12":
+      return '<img src="assets/images/card_Plus.jpg">';
+      break;
+    case "13":
+      return '<img src="assets/images/card_Question.jpg">';
+      break;
+    case "14":
+      return '<img src="assets/images/card_Quotation.jpg">';
+      break;
+    case "15":
+      return '<img src="assets/images/card_Slash.jpg">';
+      break;
+    case "16":
+      return '<img src="assets/images/card_Underscore.jpg">';
+      break;
+    default:
+      return '<img src="assets/images/card_back.jpg">';
+      break;
+  }
 }
 
-function unMute(){
-	playSound = true;
+//will return a string for each number from array with acording sound for punctuation game
+
+function getPunctuationSound(number) {
+  switch (number) {
+    case "0":
+      return "playAudio('assets/sounds/Morse_Code_-_Ampersand.mp3')";
+      break;
+    case "1":
+      return "playAudio('assets/sounds/Morse_Code_-_Apostrope.mp3')";
+      break;
+    case "2":
+      return "playAudio('assets/sounds/Morse_Code_-_At_(Commercial_At).mp3')";
+      break;
+    case "3":
+      return "playAudio('assets/sounds/Morse_Code_-_Colon.mp3')";
+      break;
+    case "4":
+      return "playAudio('assets/sounds/Morse_Code_-_Comma.mp3')";
+      break;
+    case "5":
+      return "playAudio('assets/sounds/Morse_Code_-_Dollar_Sign.mp3')";
+      break;
+    case "6":
+      return "playAudio('assets/sounds/Morse_Code_-_Equals.mp3')";
+      break;
+    case "7":
+      return "playAudio('assets/sounds/Morse_Code_-_Exclamation_Point.mp3')";
+      break;
+    case "8":
+      return "playAudio('assets/sounds/Morse_Code_-_Hyphen,_Minus.mp3')";
+      break;
+    case "9":
+      return "playAudio('assets/sounds/Morse_Code_-_Parenthesis_(Close).mp3')";
+      break;
+    case "10":
+      return "playAudio('assets/sounds/Morse_Code_-_Parenthesis_(Open).mp3')";
+      break;
+    case "11":
+      return "playAudio('assets/sounds/Morse_Code_-_Period.mp3')";
+      break;
+    case "12":
+      return "playAudio('assets/sounds/Morse_Code_-_Plus.mp3')";
+      break;
+    case "13":
+      return "playAudio('assets/sounds/Morse_Code_-_Question_Mark.mp3')";
+      break;
+    case "14":
+      return "playAudio('assets/sounds/Morse_Code_-_Quotation_Mark.mp3')";
+      break;
+    case "15":
+      return "playAudio('assets/sounds/Morse_Code_-_Slash.mp3')";
+      break;
+    case "16":
+      return "playAudio('assets/sounds/Morse_Code_-_Underscore.mp3')";
+      break;
+    default:
+      return " ";
+      break;
+  }
 }
 
+function mute() {
+  playSound = false;
+}
+
+function unMute() {
+  playSound = true;
+}
 
 function playAudio(url) {
-	if (playSound  == true) {
- 	 new Audio(url).play();
-	}
-	else { 
-	playSound == false
+  if (playSound == true) {
+    new Audio(url).play();
+  } else {
+    playSound == false;
+  }
 }
-}
-
 
 //set the sound and images for each card
 
@@ -451,4 +571,3 @@ function shuffle(array) {
   }
   return array;
 }
-
