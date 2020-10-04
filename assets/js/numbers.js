@@ -172,6 +172,30 @@ function gameLetters() {
   }
 }
 
+function gamePunctuation() {
+  gameType = 3;
+  lastKnownButtonId = undefined;
+  lastKnownButtonNumber = undefined;
+  wait = false;
+  playSound = false;
+  numbers = getRandom(punctuation, 8);
+  shuffle(numbers);
+  distributeNumbers(gameType);
+  matches = 0;
+
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].innerHTML = getgPunctuationImage(0);
+    buttons[i].style.backgroundColor = "white";
+
+    document.querySelector(".win-container").style.display = "none";
+
+    document.getElementById("6").style.display = "block";
+    document.getElementById("7").style.display = "block";
+    document.getElementById("10").style.display = "block";
+    document.getElementById("11").style.display = "block";
+  }
+}
+
 function reset() {
   lastKnownButtonId = undefined;
   lastKnownButtonNumber = undefined;
