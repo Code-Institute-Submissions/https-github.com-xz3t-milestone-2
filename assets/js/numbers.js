@@ -12,7 +12,7 @@ const buttons = document.querySelectorAll("button");
 
 // run intialization script
 function initGame() {
-  numbers = getRandom(numbers, 8); //get 8 random numbers from 0-9
+  numbers = getRandom(num, 8); //get 8 random numbers from 0-9
   shuffle(numbers);
   distributeNumbers(gameType);
 
@@ -175,7 +175,7 @@ function gameNumbers() {
   lastKnownButtonNumber = undefined;
   wait = false;
   playSound = false;
-  numbers = getRandom(numbers, 8);
+  numbers = getRandom(num, 8);
   shuffle(numbers);
   distributeNumbers(gameType);
   matches = 0;
