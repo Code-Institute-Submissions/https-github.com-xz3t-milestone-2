@@ -1,33 +1,6 @@
-var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var letters = [
-  0,
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10,
-  11,
-  12,
-  13,
-  14,
-  15,
-  16,
-  17,
-  18,
-  19,
-  20,
-  21,
-  22,
-  23,
-  24,
-  25,
-];
-var punctuation = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+var num = Array.from({length:10},(v,k)=>k*1);
+var letters = Array.from({length:26},(v,k)=>k*1);
+var punctuation = Array.from({length:17},(v,k)=>k*1);
 var lastKnownButtonId = undefined;
 var lastKnownButtonNumber = undefined;
 var wait = false;
@@ -75,13 +48,13 @@ function initGame() {
 function setImageByGameType(gameType, e) {
   switch (gameType) {
     case 1:
-      e.target.innerHTML = getgImage(event.target.dataset.number); 
+      e.target.innerHTML = getgImage(event.target.dataset.number);
       break;
     case 2:
-      e.target.innerHTML = getgLetterImage(event.target.dataset.number); 
+      e.target.innerHTML = getgLetterImage(event.target.dataset.number);
       break;
     case 3:
-      e.target.innerHTML = getgPunctuationImage(event.target.dataset.number); 
+      e.target.innerHTML = getgPunctuationImage(event.target.dataset.number);
       break;
     default:
       return " ";
