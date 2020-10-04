@@ -1,10 +1,39 @@
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var letters = [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+];
+var punctuation = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 var lastKnownButtonId = undefined;
 var lastKnownButtonNumber = undefined;
 var wait = false;
 var matches = 0;
 var playSound = false;
-var gameType = 1;  // gametype: 1 = numbers, 2= letters, 3=punctuation
+var gameType = 1; // gametype: 1 = numbers, 2= letters, 3=punctuation
 
 const buttons = document.querySelectorAll("button");
 
@@ -12,7 +41,7 @@ const buttons = document.querySelectorAll("button");
 function initGame() {
   numbers = getRandom(numbers, 8); //get 8 random numbers from 0-9
   shuffle(numbers);
-  distributeNumbers();
+  distributeNumbers(gameType);
 
   for (i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function (e) {
@@ -41,10 +70,29 @@ function initGame() {
   }
 }
 
+// return correct images by the game selected
+
+function setImageByGameType(gameType, e) {
+  switch (gameType) {
+    case 1:
+      e.target.innerHTML = getgImage(event.target.dataset.number); 
+      break;
+    case 2:
+      e.target.innerHTML = getgLetterImage(event.target.dataset.number); 
+      break;
+    case 3:
+      e.target.innerHTML = getgPunctuationImage(event.target.dataset.number); 
+      break;
+    default:
+      return " "
+      break;
+  }
+}
+
 function executeOnFirstClick(e) {
   e.target.dataset.turnable = "false"; //set turnable false so this card cant be clicked again
 
-  e.target.innerHTML = getgImage(event.target.dataset.number); //turn the image
+  setImageByGameType(gameType, e);
   e.target.style.backgroundColor = "orange"; // change background to orange
 
   lastKnownButtonId = e.target.id;
@@ -54,7 +102,7 @@ function executeOnFirstClick(e) {
 function executeOnSecondClick(e) {
   e.target.dataset.turnable = "false"; //set turnable false so this card cant be clicked again
 
-  e.target.innerHTML = getgImage(event.target.dataset.number); //turn the image
+  setImageByGameType(gameType, e);
 
   if (e.target.dataset.number == lastKnownButtonNumber) {
     executeOnMatch(e);
@@ -106,7 +154,7 @@ function gameLetters() {
   lastKnownButtonNumber = undefined;
   wait = false;
   playSound = false;
-  numbers = getRandom(letters, 8); 
+  numbers = getRandom(letters, 8);
   shuffle(letters);
   distributeNumbers(gameType);
   matches = 0;
@@ -121,8 +169,7 @@ function gameLetters() {
     document.getElementById("7").style.display = "block";
     document.getElementById("10").style.display = "block";
     document.getElementById("11").style.display = "block";
-
-  } 
+  }
 }
 
 function reset() {
@@ -561,17 +608,23 @@ function distributeNumbers(gameType) {
       buttons[i].dataset.turnable = "true"; // change to true so card can be turned again
       buttons[i].setAttribute("onclick", getSound(buttons[i].dataset.number)); // asign sounds to each card
     }
-  } else if(gameType == 2) {
+  } else if (gameType == 2) {
     for (i = 0; i < buttons.length; i++) {
       buttons[i].dataset.number = numbers[i];
       buttons[i].dataset.turnable = "true"; // change to true so card can be turned again
-      buttons[i].setAttribute("onclick", getLettersSound(buttons[i].dataset.number)); // asign sounds to each card
+      buttons[i].setAttribute(
+        "onclick",
+        getLettersSound(buttons[i].dataset.number)
+      ); // asign sounds to each card
     }
-  } else if(gameType == 3){
+  } else if (gameType == 3) {
     for (i = 0; i < buttons.length; i++) {
       buttons[i].dataset.number = numbers[i];
       buttons[i].dataset.turnable = "true"; // change to true so card can be turned again
-      buttons[i].setAttribute("onclick", getPunctuationSound(buttons[i].dataset.number)); // asign sounds to each card
+      buttons[i].setAttribute(
+        "onclick",
+        getPunctuationSound(buttons[i].dataset.number)
+      ); // asign sounds to each card
     }
   }
 }
