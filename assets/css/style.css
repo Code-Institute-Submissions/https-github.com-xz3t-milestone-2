@@ -192,6 +192,7 @@ h4 {
   height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 5px;
   padding-bottom: 10px;
 }
 
@@ -241,6 +242,8 @@ h4 {
     font-size: 40px;
     box-decoration-break: clone;
   }
+  .game-numbers {
+    padding-bottom: 30px;
 }
 
 /* hide text from navbar on small screens, hide full screen and sound as its easy to control on mobile deivice */
@@ -253,7 +256,7 @@ h4 {
   .game-numbers {
     margin: auto;
     width: 95vw;
-    height: 90vh;
+    height: 95vh;
   }
   .game-numbers img {
     width: 9vh;
@@ -270,8 +273,8 @@ h4 {
   /* resize images from cards to fit on a small screen */
   .game-numbers {
     margin: auto;
-    width: 90vw;
-    height: 90vh;
+    width: 95vw;
+    height: 95vh;
   }
   .game-numbers img {
     width: 6vh;
