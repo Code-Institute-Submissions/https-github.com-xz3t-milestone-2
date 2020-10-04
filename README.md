@@ -2,7 +2,7 @@
 
 [View the live project here.](https://xz3t.github.io/milestone-2/)
 
-This is memory game with an objective to spark some interest and teach a bit of Morse code. It is designed to be responsive and accessible on a range of devices, so its easy to play on the go.
+This is a memory game with an objective to spark some interest and teach a bit of Morse code. It is designed to be responsive and accessible on a range of devices, so it's easy to play on the go.
 
 ## <img src="https://xz3t.github.io/milestone-2/docs/preview.jpg">
 
@@ -11,17 +11,23 @@ This is memory game with an objective to spark some interest and teach a bit of 
 -   ### User stories
 
   
-        1. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-        2. As a Returning Visitor, I want to be able to have access to enough content that will keep me playing for a longer period. 
+     1. As a First Time Visitor, I want to :
+        *  be able to easily navigate throughout the site
+        *  have all content accessible through the menu without the need to use the browser back button
+        *  have an interactive experience with the content
+     
+     2. As a Returning Visitor, I want to :
+        *  be able to have access to enough content that will keep me engaged for a longer period
  
 
 -   ### Design
     -   #### Color Scheme
-        -   Colors used for text are b&w on b&w and sephia backgrounds to have a vintage theme, buttons are colorful for contrast.
+        -   Colors used for text are b&w on b&w and Sephia backgrounds to have a vintage theme, buttons are colorful for contrast.
     -   #### Typography
         -   The Lato with a fallback to Sans Serif font is used on the whole website.
     -   #### Imagery
-        -   Images used are representative of the Morse Code theme and are black and white/ sephia effects.
+        -   Images used are representative of the Morse Code theme and are black and white/ Sephia effects.
+        -   Black morse code image added and positioned on black and white parallax image to accentuate the effect and it's not intended to be visible and clear.
 
 *   ### Wireframes
 
@@ -71,37 +77,37 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   #### Jasmine testing
 
 -   Successfully tested getgImage() and getSound() function in number and letters scripts:
-   1. numbers: (https://xz3t.github.io/milestone-2/spec/numbers.html)
-   2. letters: (https://xz3t.github.io/milestone-2/spec/letters.html)
+        *  numbers: (https://xz3t.github.io/milestone-2/spec/card-game.html)
+   
 
 
--   #### First Time Visitor Goals
+  #### First Time Visitor Goals
 
-    1. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
+   1. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
 
-        1. Upon entering the site, users is on homepage with clean design, with navigation bar and 3 buttons to whatis/rules and the game itself.
-        2. The user has two options, click the call to action buttons or scroll down, both of which will lead to the same places.
-        3. At the bottom of viewport there is navigation menu to ensure the user has always access to all areas of the page.
-        4. At the bottom of the page it is the game.
+        * Upon entering the site, users are on the homepage with a clean design, with a navigation bar and 3 buttons to what-is/rules and the game itself.
+        * The user has two options, click the call to action buttons or scroll down, both of which will lead to the same places.
+        * At the bottom of the viewport there is a navigation menu to ensure the user has always access to all areas of the page.
+        * At the bottom of the page it is the game.
 
--   #### Returning Visitor Goals
+  #### Returning Visitor Goals
 
-    1. As a Returning Visitor, I want to find more challenges.
+   1. As a Returning Visitor, I want to find more challenges.
 
-        1. These are 3 version of the game with Numbers/Letters and Punctuation that combine in total of 53 different cards.
+        * These are 3 versions of the game with Numbers/Letters and Punctuation that combine in a total of 53 different cards.
     
 ### Further Testing
 
--   The Website was tested on Google Chrome, Opera, Microsoft Edge and mobile Safari browsers.
+-   The Website was tested on Google Chrome, Opera, Microsoft Edge, and mobile Safari browsers.
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone5S, iPhone 6, Nokia 5 & Pixel3a.
 -   Friends were asked to review the site and play the game to point out any bugs and/or user experience issues.
 
 
 ### Known Bugs
 
--   on small mobile devices game area may be wider than the rest of the page and it breaks the intended view. 
--   by default sound will play as loud as the device is set up
--   link in Morse code left as the line without styling to get people to click on it, but it is just getting to the page it can be trasnlated without copyiing itself to buffer.
+-   game is responsive down to 320px but would be better enjoyed on a bigger screen 
+-   by default sound will play as loud as the device is set up, mute button available
+-   link in Morse code left as the line without styling to get people to click on it, but it is just getting to the page it can be translated without copying itself to buffer.
 
 ## Deployment
 
@@ -117,48 +123,15 @@ The project was deployed to GitHub Pages using the following steps...
 5. The page will automatically refresh.
 6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
 
-### Forking the GitHub Repository
-
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
-
-### Making a Local Clone
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-```
-
-7. Press Enter. Your local clone will be created.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
-
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 ## Credits
 
 ### Code
 
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+-   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make the site responsive using the Bootstrap Grid System.
 
--   Starting point of the game script was taken and adapted to my needs from: (https://github.com/SanderCokart/javascript-memory-game)
-
+-   The starting point of the game script was taken and adapted to project needs from (https://github.com/SanderCokart/javascript-memory-game)
+    
 ### Media
 
 -   All Images card images were created by the developer.
