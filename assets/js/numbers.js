@@ -106,7 +106,7 @@ function gameLetters() {
   lastKnownButtonNumber = undefined;
   wait = false;
   playSound = false;
-  numbers = getRandom(letters, 8); //get 8 random numbers from 0-9
+  numbers = getRandom(letters, 8); 
   shuffle(letters);
   distributeNumbers(gameType);
   matches = 0;
@@ -554,11 +554,25 @@ function playAudio(url) {
 
 //set the sound and images for each card
 
-function distributeNumbers() {
-  for (i = 0; i < buttons.length; i++) {
-    buttons[i].dataset.number = numbers[i];
-    buttons[i].dataset.turnable = "true"; // change to true so card can be turned again
-    buttons[i].setAttribute("onclick", getSound(buttons[i].dataset.number)); // asign sounds to each card
+function distributeNumbers(gameType) {
+  if (gameType == 1) {
+    for (i = 0; i < buttons.length; i++) {
+      buttons[i].dataset.number = numbers[i];
+      buttons[i].dataset.turnable = "true"; // change to true so card can be turned again
+      buttons[i].setAttribute("onclick", getSound(buttons[i].dataset.number)); // asign sounds to each card
+    }
+  } else if(gameType == 2) {
+    for (i = 0; i < buttons.length; i++) {
+      buttons[i].dataset.number = numbers[i];
+      buttons[i].dataset.turnable = "true"; // change to true so card can be turned again
+      buttons[i].setAttribute("onclick", getLettersSound(buttons[i].dataset.number)); // asign sounds to each card
+    }
+  } else if(gameType == 3){
+    for (i = 0; i < buttons.length; i++) {
+      buttons[i].dataset.number = numbers[i];
+      buttons[i].dataset.turnable = "true"; // change to true so card can be turned again
+      buttons[i].setAttribute("onclick", getPunctuationSound(buttons[i].dataset.number)); // asign sounds to each card
+    }
   }
 }
 
