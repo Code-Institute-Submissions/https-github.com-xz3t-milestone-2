@@ -84,7 +84,7 @@ function setImageByGameType(gameType, e) {
       e.target.innerHTML = getgPunctuationImage(event.target.dataset.number); 
       break;
     default:
-      return " "
+      return " ";
       break;
   }
 }
@@ -155,7 +155,7 @@ function gameLetters() {
   wait = false;
   playSound = false;
   numbers = getRandom(letters, 8);
-  shuffle(letters);
+  shuffle(numbers);
   distributeNumbers(gameType);
   matches = 0;
 
