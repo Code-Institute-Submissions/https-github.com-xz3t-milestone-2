@@ -1,11 +1,11 @@
-<h1 align="center">Morse code Learning Game</h1>
+# Morse code Learning Game
 
 [View the live project here.](https://xz3t.github.io/milestone-2/)
 
 This is memory game with an objective to spark some interest and teach a bit of Morse code. It is designed to be responsive and accessible on a range of devices, so its easy to play on the go.
 
-<h2 align="center"><img src="https://xz3t.github.io/milestone-2/docs/preview.jpg"></h2>
-a
+## <img src="https://xz3t.github.io/milestone-2/docs/preview.jpg">
+
 ## User Experience (UX)
 
 -   ### User stories
