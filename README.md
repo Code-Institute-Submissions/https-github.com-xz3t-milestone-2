@@ -11,12 +11,12 @@ This is a memory game with an objective to spark some interest and teach a bit o
 -   ### User stories
 
   
-     1. As a First Time Visitor, I want to :
+    -  As a First Time Visitor, I want to :
         *  be able to easily navigate throughout the site
         *  have all content accessible through the menu without the need to use the browser back button
         *  have an interactive experience with the content
      
-     2. As a Returning Visitor, I want to :
+    -  As a Returning Visitor, I want to :
         *  be able to have access to enough content that will keep me engaged for a longer period
  
 
@@ -77,13 +77,13 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   #### Jasmine testing
 
 -   Successfully tested getgImage() and getSound() function in number and letters scripts:
-        *  numbers: (https://xz3t.github.io/milestone-2/spec/card-game.html)
+       (https://xz3t.github.io/milestone-2/spec/card-game.html)
    
 
 
   #### First Time Visitor Goals
 
-   1. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
+   - As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
 
         * Upon entering the site, users are on the homepage with a clean design, with a navigation bar and 3 buttons to what-is/rules and the game itself.
         * The user has two options, click the call to action buttons or scroll down, both of which will lead to the same places.
@@ -92,7 +92,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
   #### Returning Visitor Goals
 
-   1. As a Returning Visitor, I want to find more challenges.
+   -  As a Returning Visitor, I want to find more challenges.
 
         * These are 3 versions of the game with Numbers/Letters and Punctuation that combine in a total of 53 different cards.
     
