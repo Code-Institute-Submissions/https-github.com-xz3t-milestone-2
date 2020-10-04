@@ -1,6 +1,6 @@
-var num = Array.from({length:10},(v,k)=>k*1);
-var letters = Array.from({length:26},(v,k)=>k*1);
-var punctuation = Array.from({length:17},(v,k)=>k*1);
+var num = Array.from({ length: 10 }, (_v, k) => k * 1);  // 10 numbers to include 0-9
+var letters = Array.from({ length: 26 }, (_v, k) => k * 1); // 26 numbers for letters in alphabet
+var punctuation = Array.from({ length: 17 }, (_v, k) => k * 1); // 17 numbers for punctuation cards
 var lastKnownButtonId = undefined;
 var lastKnownButtonNumber = undefined;
 var wait = false;
@@ -12,9 +12,9 @@ const buttons = document.querySelectorAll("button");
 
 // run intialization script
 function initGame() {
-  numbers = getRandom(num, 8); //get 8 random numbers from 0-9
-  shuffle(numbers);
-  distributeNumbers(gameType);
+    numbers = getRandom(num, 8); //get 8 random numbers from 0-9
+    shuffle(numbers);
+    distributeNumbers(gameType);
 
   for (i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function (e) {
@@ -58,7 +58,6 @@ function setImageByGameType(gameType, e) {
       break;
     default:
       return " ";
-      break;
   }
 }
 
@@ -193,27 +192,6 @@ function gameNumbers() {
   }
 }
 
-function reset() {
-  lastKnownButtonId = undefined;
-  lastKnownButtonNumber = undefined;
-  wait = false;
-  shuffle(numbers);
-  distributeNumbers();
-  matches = 0;
-
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].innerHTML = getgImage(0);
-    buttons[i].style.backgroundColor = "white";
-
-    document.querySelector(".win-container").style.display = "none";
-
-    document.getElementById("6").style.display = "block";
-    document.getElementById("7").style.display = "block";
-    document.getElementById("10").style.display = "block";
-    document.getElementById("11").style.display = "block";
-  }
-}
-
 // showWinScreen();
 
 function showWinScreen() {
@@ -262,7 +240,6 @@ function getgImage(number) {
       break;
     default:
       return '<img src="assets/images/card_back.jpg">';
-      break;
   }
 }
 
@@ -302,7 +279,6 @@ function getSound(number) {
       break;
     default:
       return " ";
-      break;
   }
 }
 
@@ -390,7 +366,6 @@ function getgLetterImage(number) {
       break;
     default:
       return '<img src="assets/images/card_back.jpg">';
-      break;
   }
 }
 
@@ -478,7 +453,6 @@ function getLettersSound(number) {
       break;
     default:
       return " ";
-      break;
   }
 }
 
@@ -539,8 +513,7 @@ function getgPunctuationImage(number) {
       break;
     default:
       return '<img src="assets/images/card_back.jpg">';
-      break;
-  }
+   }
 }
 
 //will return a string for each number from array with acording sound for punctuation game
@@ -600,7 +573,6 @@ function getPunctuationSound(number) {
       break;
     default:
       return " ";
-      break;
   }
 }
 
