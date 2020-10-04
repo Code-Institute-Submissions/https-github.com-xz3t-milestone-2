@@ -1,20 +1,20 @@
-var num = Array.from({ length: 10 }, (_v, k) => k * 1);  // 10 numbers to include 0-9
+var num = Array.from({ length: 10 }, (_v, k) => k * 1); // 10 numbers to include 0-9
 var letters = Array.from({ length: 26 }, (_v, k) => k * 1); // 26 numbers for letters in alphabet
 var punctuation = Array.from({ length: 17 }, (_v, k) => k * 1); // 17 numbers for punctuation cards
 var lastKnownButtonId = undefined;
 var lastKnownButtonNumber = undefined;
 var wait = false;
 var matches = 0;
-var playSound = false;
+var playSound = true;
 var gameType = 1; // gametype: 1 = numbers, 2= letters, 3=punctuation
 
 const buttons = document.querySelectorAll("button");
 
 // run intialization script
 function initGame() {
-    numbers = getRandom(num, 8); //get 8 random numbers from 0-9
-    shuffle(numbers);
-    distributeNumbers(gameType);
+  numbers = getRandom(num, 8); //get 8 random numbers from 0-9
+  shuffle(numbers);
+  distributeNumbers(gameType);
 
   for (i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function (e) {
@@ -513,7 +513,7 @@ function getgPunctuationImage(number) {
       break;
     default:
       return '<img src="assets/images/card_back.jpg">';
-   }
+  }
 }
 
 //will return a string for each number from array with acording sound for punctuation game
@@ -622,7 +622,7 @@ function distributeNumbers(gameType) {
   }
 }
 
-//get array of 0-9 numbers and pick 8 numbers
+//get random 8 numbers from array
 function getRandom(arr, n) {
   let m = n * 2;
   let result = new Array(n),
