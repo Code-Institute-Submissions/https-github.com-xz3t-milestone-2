@@ -134,7 +134,7 @@ function gameLetters() {
 
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].innerHTML = getgLetterImage(0);
-    buttons[i].style.backgroundColor = "white";
+    buttons[i].style.backgroundColor = "rgba(255, 255, 255, 0.7)";
 
     document.querySelector(".win-container").style.display = "none";
 
@@ -158,7 +158,7 @@ function gamePunctuation() {
 
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].innerHTML = getgPunctuationImage(0);
-    buttons[i].style.backgroundColor = "white";
+    buttons[i].style.backgroundColor = "rgba(255, 255, 255, 0.7)";
 
     document.querySelector(".win-container").style.display = "none";
 
@@ -182,7 +182,7 @@ function gameNumbers() {
 
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].innerHTML = getgImage(0);
-    buttons[i].style.backgroundColor = "white";
+    buttons[i].style.backgroundColor = "rgba(255, 255, 255, 0.7)";
 
     document.querySelector(".win-container").style.display = "none";
 
