@@ -4,6 +4,7 @@ var lastKnownButtonNumber = undefined;
 var wait = false;
 var matches = 0;
 var playSound = false;
+var gameType = 1;  // gametype: 1 = numbers, 2= letters, 3=punctuation
 
 const buttons = document.querySelectorAll("button");
 
@@ -97,6 +98,31 @@ function executeOnMismatch(e) {
     lastKnownButtonNumber = undefined;
     wait = false;
   }, 1500);
+}
+
+function gameLetters() {
+  gameType = 2;
+  lastKnownButtonId = undefined;
+  lastKnownButtonNumber = undefined;
+  wait = false;
+  playSound = false;
+  numbers = getRandom(letters, 8); //get 8 random numbers from 0-9
+  shuffle(letters);
+  distributeNumbers(gameType);
+  matches = 0;
+
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].innerHTML = getgLetterImage(0);
+    buttons[i].style.backgroundColor = "white";
+
+    document.querySelector(".win-container").style.display = "none";
+
+    document.getElementById("6").style.display = "block";
+    document.getElementById("7").style.display = "block";
+    document.getElementById("10").style.display = "block";
+    document.getElementById("11").style.display = "block";
+
+  } 
 }
 
 function reset() {
