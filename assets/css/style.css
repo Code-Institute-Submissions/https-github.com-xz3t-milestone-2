@@ -259,7 +259,7 @@ h4 {
     height: 95vh;
   }
   .game-numbers img {
-    width: 9vh;
+    width: 80%;
     pointer-events: none;
   }
 }
@@ -277,19 +277,20 @@ h4 {
     height: 95vh;
   }
   .game-numbers img {
-    width: 6vh;
+    width: 100%;
     pointer-events: none;
   }
  .img-morse-code {
-  height: 346px;
-  width: 246px;
-}
+   height: 346px;
+   width: 246px;
+    }
 }
 
 @media only screen and (max-width: 340px) {
 
   .game-numbers img {
-    width: 4vh;
+    width: 100%;
+
     pointer-events: none;
   }
 }}
