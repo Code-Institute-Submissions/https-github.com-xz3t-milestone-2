@@ -6,13 +6,13 @@ var matches = 0;
 var playSound = true;
 var sound = true;
 var gameType = 1; // gametype: 1 = numbers, 2= letters, 3=punctuation
-var lastKnownButtonId, lastKnownButtonNumber, wait, i, numbers; // all used variables
+var lastKnownButtonId, lastKnownButtonNumber, wait, i, numbers; // declared all further used variables
 
 const buttons = document.querySelectorAll("button");
 
 // run intialization script
 function initGame() {
-  numbers = getRandom(num, 8); //get 8 random numbers from 0-9
+  numbers = getRandom(num, 8); //get 8 random numbers from num array
   shuffle(numbers);
   distributeNumbers(gameType);
   lastKnownButtonId = undefined;
@@ -105,7 +105,7 @@ function executeOnMismatch(e) {
   e.target.style.backgroundColor = "red"; //set 2nd turned card red background
   wait = true;
 
-  //create a delay between clicking on cards (delay also needed for sound to play for the card)
+  //create a delay between clicking on cards 
   setTimeout(() => {
     e.target.dataset.turnable = "true";
     e.target.style.backgroundColor = "white";
@@ -123,6 +123,8 @@ function executeOnMismatch(e) {
   }, 1500);
 }
 
+// resets game and asign letters images and sounds
+
 function gameLetters() {
   gameType = 2;
   lastKnownButtonId = undefined;
@@ -138,13 +140,14 @@ function gameLetters() {
     buttons[i].style.backgroundColor = "rgba(255, 255, 255, 0.7)";
 
     document.querySelector(".win-container").style.display = "none";
-
     document.getElementById("6").style.display = "block";
     document.getElementById("7").style.display = "block";
     document.getElementById("10").style.display = "block";
     document.getElementById("11").style.display = "block";
   }
 }
+
+// resets game and asign punctuation images and sounds
 
 function gamePunctuation() {
   gameType = 3;
@@ -161,13 +164,14 @@ function gamePunctuation() {
     buttons[i].style.backgroundColor = "rgba(255, 255, 255, 0.7)";
 
     document.querySelector(".win-container").style.display = "none";
-
     document.getElementById("6").style.display = "block";
     document.getElementById("7").style.display = "block";
     document.getElementById("10").style.display = "block";
     document.getElementById("11").style.display = "block";
   }
 }
+
+// resets game and asign numbers images and sounds
 
 function gameNumbers() {
   gameType = 1;
@@ -184,7 +188,6 @@ function gameNumbers() {
     buttons[i].style.backgroundColor = "rgba(255, 255, 255, 0.7)";
 
     document.querySelector(".win-container").style.display = "none";
-
     document.getElementById("6").style.display = "block";
     document.getElementById("7").style.display = "block";
     document.getElementById("10").style.display = "block";
@@ -478,7 +481,6 @@ function unMute() {
   playSound = true;
 }
 
-
 function delaySound(url) {
     if (sound == true) {
         sound = false;
@@ -498,14 +500,14 @@ function playAudio(url) {
   }
 }
 
-//set the sound and images for each card
+//set the sound and images for each card by gametype
 
 function distributeNumbers(gameType) {
   if (gameType == 1) {
     for (i = 0; i < buttons.length; i++) {
       buttons[i].dataset.number = numbers[i];
       buttons[i].dataset.turnable = "true"; // change to true so card can be turned again
-      buttons[i].setAttribute("onclick", getSound(buttons[i].dataset.number)); // asign sounds to each card
+      buttons[i].setAttribute("onclick", getSound(buttons[i].dataset.number)); // assign sounds to each card
     }
   } else if (gameType == 2) {
     for (i = 0; i < buttons.length; i++) {
@@ -513,8 +515,7 @@ function distributeNumbers(gameType) {
       buttons[i].dataset.turnable = "true"; // change to true so card can be turned again
       buttons[i].setAttribute(
         "onclick",
-        getLettersSound(buttons[i].dataset.number)
-      ); // asign sounds to each card
+        getLettersSound(buttons[i].dataset.number)); // assign sounds to each card
     }
   } else if (gameType == 3) {
     for (i = 0; i < buttons.length; i++) {
@@ -522,13 +523,13 @@ function distributeNumbers(gameType) {
       buttons[i].dataset.turnable = "true"; // change to true so card can be turned again
       buttons[i].setAttribute(
         "onclick",
-        getPunctuationSound(buttons[i].dataset.number)
-      ); // asign sounds to each card
+        getPunctuationSound(buttons[i].dataset.number)); // assign sounds to each card
     }
   }
 }
 
-//get random 8 numbers from array
+//get random 8 numbers from an array
+
 function getRandom(arr, n) {
   let m = n * 2;
   let result = new Array(n),
