@@ -133,16 +133,16 @@ The project was deployed to GitHub Pages using the following steps...
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make the site responsive using the Bootstrap Grid System.
 
 -   The starting point of the game script was taken and adapted to project needs from (https://github.com/SanderCokart/javascript-memory-game)
-
+    
     
 ### Media
 
 -   All Images card images were created by the developer.
 -   Sounds were downloaded from wiki page on morse code 
 -   other images used in project: 
-     1. https://2.bp.blogspot.com/-_3whB542d6g/WIqjUtWPjPI/AAAAAAAAdOw/yUL9eCdKiAglZF1dmwvkuTiK2mmbVGQdgCEw/s640/skn-1.jpg
-     2. https://i1.wp.com/www.sporcle.com/blog/wp-content/uploads/2018/10/1-38.jpg?resize=1280%2C720&ssl=1
-     3. https://www.daysoftheyear.com/cdn-cgi/image/fit=cover,f=auto,onerror=redirect,width=866,height=434/wp-content/uploads/morse-code-day1-e1556102421598-scaled.jpg
+     1. [background image no 1](https://2.bp.blogspot.com/-_3whB542d6g/WIqjUtWPjPI/AAAAAAAAdOw/yUL9eCdKiAglZF1dmwvkuTiK2mmbVGQdgCEw/s640/skn-1.jpg)
+     2. [background image no 2](https://i1.wp.com/www.sporcle.com/blog/wp-content/uploads/2018/10/1-38.jpg?resize=1280%2C720&ssl=1)
+     3. [background image no 3](https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/10685559/1849_telegraph.jpg)
 
 ### Acknowledgements
 
