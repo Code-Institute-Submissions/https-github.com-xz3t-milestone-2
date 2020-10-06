@@ -126,7 +126,6 @@ function gameLetters() {
   lastKnownButtonId = undefined;
   lastKnownButtonNumber = undefined;
   wait = false;
-  playSound = false;
   numbers = getRandom(letters, 8);
   shuffle(numbers);
   distributeNumbers(gameType);
@@ -150,7 +149,6 @@ function gamePunctuation() {
   lastKnownButtonId = undefined;
   lastKnownButtonNumber = undefined;
   wait = false;
-  playSound = false;
   numbers = getRandom(punctuation, 8);
   shuffle(numbers);
   distributeNumbers(gameType);
@@ -174,7 +172,6 @@ function gameNumbers() {
   lastKnownButtonId = undefined;
   lastKnownButtonNumber = undefined;
   wait = false;
-  playSound = false;
   numbers = getRandom(num, 8);
   shuffle(numbers);
   distributeNumbers(gameType);
