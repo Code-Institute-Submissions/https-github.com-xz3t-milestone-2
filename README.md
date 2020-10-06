@@ -4,7 +4,7 @@
 
 This is a memory game with an objective to spark some interest and teach a bit of Morse code. It is designed to be responsive and accessible on a range of devices, so it's easy to play on the go.
 
-## <img src="https://xz3t.github.io/milestone-2/docs/preview.jpg">
+![Preview](/docs/preview.jpg)
 
 ## User Experience (UX)
 
@@ -15,6 +15,7 @@ This is a memory game with an objective to spark some interest and teach a bit o
         *  be able to easily navigate throughout the site
         *  have all content accessible through the menu without the need to use the browser back button
         *  have an interactive experience with the content
+        *  be able to run the game from the pc or a mobile device without losing on any futures
      
     -  As a Returning Visitor, I want to :
         *  be able to have access to enough content that will keep me engaged for a longer period
@@ -38,7 +39,9 @@ This is a memory game with an objective to spark some interest and teach a bit o
 
 ## Features
 
--   Responsive on all device sizes
+-   Responsive on all device sizes.
+
+    ![small device](/docs/devices_prev.png)
 
 -   Interactive elements in form of a card turning memory game with added sound for complexity
 
@@ -69,8 +72,8 @@ This is a memory game with an objective to spark some interest and teach a bit o
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://validator.w3.org/#validate_by_input) - [Results](https://xz3t.github.io/milestone-2/docs/Showing%20results%20for%20contents%20of%20text-input%20area%20-%20Nu%20Html%20Checker.html)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://xz3t.github.io/milestone-2/docs/W3C%20CSS%20Validator%20results%20for%20TextArea%20(CSS%20level%203%20+%20SVG).html)
+-   [W3C Markup Validator](https://validator.w3.org/) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fxz3t.github.io%2Fmilestone-2%2Findex.html)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fxz3t.github.io%2Fmilestone-2%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -117,7 +120,6 @@ The project was deployed to GitHub Pages using the following steps...
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
 4. Under "Source", click the dropdown called "None" and select "Master Branch".
 5. The page will automatically refresh.
@@ -131,6 +133,7 @@ The project was deployed to GitHub Pages using the following steps...
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make the site responsive using the Bootstrap Grid System.
 
 -   The starting point of the game script was taken and adapted to project needs from (https://github.com/SanderCokart/javascript-memory-game)
+
     
 ### Media
 
