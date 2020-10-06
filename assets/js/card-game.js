@@ -6,6 +6,7 @@ var lastKnownButtonNumber = undefined;
 var wait = false;
 var matches = 0;
 var playSound = true;
+var sound = true;
 var gameType = 1; // gametype: 1 = numbers, 2= letters, 3=punctuation
 
 const buttons = document.querySelectorAll("button");
@@ -584,9 +585,21 @@ function unMute() {
   playSound = true;
 }
 
+
+function delaySound(url) {
+    if (sound == true) {
+        sound = false;
+        new Audio(url).play();
+        setTimeout(() => {
+            sound = true;
+        }, 1000);
+        
+    }
+}
+
 function playAudio(url) {
   if (playSound == true) {
-    new Audio(url).play();
+    delaySound(url);
   } else {
     playSound == false;
   }
