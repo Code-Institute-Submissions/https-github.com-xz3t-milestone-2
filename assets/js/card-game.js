@@ -1,13 +1,12 @@
+/*jshint esversion: 6 */
 var num = Array.from({ length: 10 }, (_v, k) => k * 1); // 10 numbers to include 0-9
 var letters = Array.from({ length: 26 }, (_v, k) => k * 1); // 26 numbers for letters in alphabet
 var punctuation = Array.from({ length: 17 }, (_v, k) => k * 1); // 17 numbers for punctuation cards
-var lastKnownButtonId = undefined;
-var lastKnownButtonNumber = undefined;
-var wait = false;
 var matches = 0;
 var playSound = true;
 var sound = true;
 var gameType = 1; // gametype: 1 = numbers, 2= letters, 3=punctuation
+var lastKnownButtonId, lastKnownButtonNumber, wait, i, numbers; // all used variables
 
 const buttons = document.querySelectorAll("button");
 
@@ -16,6 +15,9 @@ function initGame() {
   numbers = getRandom(num, 8); //get 8 random numbers from 0-9
   shuffle(numbers);
   distributeNumbers(gameType);
+  lastKnownButtonId = undefined;
+  lastKnownButtonNumber = undefined;
+  wait = false;
 
   for (i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function (e) {
