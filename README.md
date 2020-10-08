@@ -108,9 +108,12 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Known Bugs
 
--   game is responsive down to 320px but would be better enjoyed on a bigger screen 
+-   game is responsive down to 320px but would be better enjoyed on a bigger screen
+-   on smaller screens, the bottom menu will only contain icons without text, for the users that will not venture to discover the buttons, the win screen contains links to all 3 variations of the game.
 -   by default sound will play as loud as the device is set up, mute button available
+-   a delay is present between click for sounds that will stop the user from hearing overlapping sound but will not play second one after the first one is finished.
 -   link in Morse code left as the line without styling to get people to click on it, but it is just getting to the page it can be translated without copying itself to buffer.
+
 
 ## Deployment
 
@@ -140,9 +143,9 @@ The project was deployed to GitHub Pages using the following steps...
 -   All Images card images were created by the developer.
 -   Sounds were downloaded from wiki page on morse code 
 -   other images used in project: 
-     1. [background image no 1](https://2.bp.blogspot.com/-_3whB542d6g/WIqjUtWPjPI/AAAAAAAAdOw/yUL9eCdKiAglZF1dmwvkuTiK2mmbVGQdgCEw/s640/skn-1.jpg)
-     2. [background image no 2](https://i1.wp.com/www.sporcle.com/blog/wp-content/uploads/2018/10/1-38.jpg?resize=1280%2C720&ssl=1)
-     3. [background image no 3](https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/10685559/1849_telegraph.jpg)
+     * [background image no 1](https://2.bp.blogspot.com/-_3whB542d6g/WIqjUtWPjPI/AAAAAAAAdOw/yUL9eCdKiAglZF1dmwvkuTiK2mmbVGQdgCEw/s640/skn-1.jpg)
+     * [background image no 2](https://i1.wp.com/www.sporcle.com/blog/wp-content/uploads/2018/10/1-38.jpg?resize=1280%2C720&ssl=1)
+     * [background image no 3](https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/10685559/1849_telegraph.jpg)
 
 ### Acknowledgements
 
